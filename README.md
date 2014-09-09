@@ -1,4 +1,4 @@
 MultiPong
 =========
 
-A competitive Pong-like game on steroid for Android/IOS.
+A competitive Pong-like game on steroids for Android/IOS.
