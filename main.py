@@ -20,7 +20,7 @@ class Ball(Image):
 		super(Ball, self).__init__(**kwargs)
 		velocity = [0, 0]
 
-	def move(self):
+	def move(self, *args):
 		"""
 		Moves the ball to its t+1 position according to its velocity.
 		"""
@@ -45,7 +45,7 @@ class PongGame(FloatLayout):
 
 		# velocity is 7 or -7 ; angle is between -75° and 75°
 		self.ball.velocity = Vector([random.choice([-7, 7]), 0]).rotate(random.randint(-75, 75))
-		
+
 		# wait 3 sec, then call update_game() every 1/60 sec
 		Clock.schedule_once(lambda x: Clock.schedule_interval(self.update_game, 1.0/60), 3)
 		Clock.schedule_once(lambda x: SoundLoader.load('./sounds/serve_ball.wav').play(), 3)
