@@ -18,7 +18,7 @@ import random
 class Ball(Image):
 	def __init__(self, **kwargs):
 		super(Ball, self).__init__(**kwargs)
-		velocity = [0, 0]
+		self.velocity = [0, 0]
 
 	def move(self, *args):
 		"""
